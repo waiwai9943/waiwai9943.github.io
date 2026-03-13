@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work - Isaac Wu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .work-header {
+            padding: 10rem 0 4rem;
+            text-align: center;
+        }
+
+        .project-card {
+            background: var(--bg-glass);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 3rem;
+        }
+
+        .project-title {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .media-container {
+            width: 100%;
+            background: var(--bg-secondary);
+            position: relative;
+            padding: 1rem;
+        }
+
+        .iframe-wrapper {
+            width: 100%;
+            height: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+            padding: 0 3rem 3rem;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+            border-color: var(--accent-primary);
+        }
+
+        .split-project {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 0 3rem 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .split-project {
+                grid-template-columns: 1fr;
+            }
+
+            .project-content {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Home</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-work.html" class="active">My Work</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="work-header fade-up visible">
+        <div class="container">
+            <h1 class="hero-title">My Latest <span>Work</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">A showcase of my projects in
+                geospatial analysis, financial modeling, and engineering data.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+
+            <!-- Project 1 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Geoquant - Alternative Data from space</h2>
+                    <div class="project-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 2023</span>
+                        <span><i class="fas fa-tag"></i> Data Analytics</span>
+                    </div>
+                    <p>A study of corn's healthiness in the US and corn's future.</p>
+                </div>
+                <div class="media-container">
+                    <div class="iframe-wrapper">
+                        <iframe src="https://geoquant-575923250281.us-central1.run.app"
+                            title="choropleth map of mean price" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Multiple Linear Regression Model (Tseng's Tunnel)</h2>
+                    <p>Evaluating the reasonable price of a stock ticket/index using statistical modeling.</p>
+                </div>
+                <div class="media-container">
+                    <div class="iframe-wrapper">
+                        <iframe src="https://stocklinear-152860377095.us-east1.run.app/" title="Stock Linear Model"
+                            scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Farmland Profitability System</h2>
+                    <p>Monitoring vegetation and soil using NVDI and BSI.</p>
+                </div>
+                <div class="media-container">
+                    <div class="iframe-wrapper">
+                        <iframe src="https://agriapp-152860377095.us-east1.run.app/" title="Agri App"
+                            scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">VAR Time Series Model - Stock & Bonds</h2>
+                    <p>Vector autoregressive (VAR) time series model of US stock index and the interest rate of bonds.
+                    </p>
+                    <a href="https://colab.research.google.com/drive/1GThfFIhEUzNMC79-MteUqe0tQYx64VZ1?usp=sharing"
+                        target="_blank" class="btn btn-outline" style="margin-top: 1rem;"><i class="fab fa-google"></i>
+                        View Colab Script</a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Rental Price Spatial Analytics in Toronto</h2>
+                    <p>A study on the spatial distribution of rental prices in Toronto using Python
+                        (pandas/geopandas/folium) and GIS operations.</p>
+                    <a href="https://colab.research.google.com/drive/1Vc2fJUd4onDW4eT9nH4hYIL2P0DgqhCk?usp=sharing"
+                        target="_blank" class="btn btn-outline" style="margin-top: 1rem;"><i class="fab fa-google"></i>
+                        View Colab Script</a>
+                </div>
+                <div class="media-container">
+                    <div class="iframe-wrapper" style="height: 500px;">
+                        <iframe src="https://waiwai9943.github.io/gis_web_private/heatmap.html"
+                            title="Heatmap of rental in Toronto" scrolling="no"></iframe>
+                    </div>
+                </div>
+                <div class="split-project" style="margin-top: 2rem;">
+                    <div class="iframe-wrapper" style="height: 400px;">
+                        <iframe src="https://waiwai9943.github.io/gis_web_private/choropleth.html"
+                            title="Choropleth map" scrolling="no"></iframe>
+                    </div>
+                    <div class="iframe-wrapper" style="height: 400px;">
+                        <iframe src="https://waiwai9943.github.io/gis_web_private/lisa.html" title="LISA"
+                            scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Backtesting MACD+RSI Strategy</h2>
+                    <p>A statistical testing approach combining MACD and RSI technical indicators across trading
+                        instruments.</p>
+                </div>
+                <div class="media-container">
+                    <div class="iframe-wrapper" style="height: 1000px;">
+                        <iframe src="https://waiwai9943.github.io/gis_web_private/MACDcross_RSI.html"
+                            title="MACD+RSI Strategy" scrolling="no"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 7 -->
+            <div class="project-card fade-up">
+                <div class="project-content">
+                    <h2 class="project-title">Quantifying Afghan War Aftermath (Thesis)</h2>
+                    <p>Using remote sensing with deep learning (ANN) to evaluate land cover change over 20 years in
+                        Afghanistan using GEE.</p>
+                    <a href="https://connectpolyu-my.sharepoint.com/:b:/g/personal/20015042d_connect_polyu_hk/Ed6OVlSYVx1HvQDWzr6zl0QBKt3KtK1q1wtGBBVtdc-V_A?e=NXPYge"
+                        target="_blank" class="btn btn-primary" style="margin-top: 1rem;"><i
+                            class="fas fa-file-pdf"></i> View Thesis</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Isaac Wu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

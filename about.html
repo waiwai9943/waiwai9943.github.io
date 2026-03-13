@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Isaac Wu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-header {
+            padding: 12rem 0 4rem;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+        }
+
+        .resume-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .resume-section:last-child {
+            border-bottom: none;
+        }
+
+        .resume-title {
+            font-size: 2rem;
+            color: var(--accent-primary);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent-primary);
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .about-image {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--accent-primary);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="index.html" class="logo">Home</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-work.html">My Work</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="about-header fade-up visible">
+        <div class="container">
+            <h1 class="hero-title">About <span>Me.</span></h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Surveying & Geo-informatics
+                professional with a passion for Data Analytics and Engineering.</p>
+            <div class="social-links" style="justify-content: center;">
+                <a href="https://www.linkedin.com/in/isaac-wu/" target="_blank" class="social-link"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:waiwai9943@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <br>
+            <a href="https://connectpolyu-my.sharepoint.com/:b:/g/personal/20015042d_connect_polyu_hk/EROfLpJteEpLnzbAumsZRcYBcqhrGrcbzokLlEQ2Lmq2Dw?e=NAlWu9"
+                target="_blank" class="btn btn-primary" style="margin-top:1rem;">Download My CV</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div class="fade-up">
+                    <img src="uploads/1/4/3/0/143039272/published/photo.png" alt="Isaac Wu" class="about-image">
+                    <img src="uploads/1/4/3/0/143039272/published/work-exp.png" alt="Work Experience Overview"
+                        class="about-image glass" style="background: white;">
+                    <!-- White bg because it's deeply tied to an image from weebly that might have text designed for light bg -->
+                </div>
+
+                <div class="glass" style="padding: 3rem;">
+
+                    <div class="resume-section fade-up">
+                        <h3 class="resume-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="font-size: 1.2rem; margin-bottom:0.5rem;">The Hong Kong Polytechnic University
+                            </h4>
+                            <p style="color: var(--text-secondary);">- Bachelor of Science (First Class Hons.) in Land
+                                Surveying and Geo-informatics, GPA 3.72/4.0</p>
+                            <p style="color: var(--text-secondary);">- Higher Diploma (Distinction) in Land Surveying
+                                and Geo-informatics, GPA 3.72/4.0</p>
+                        </div>
+                    </div>
+
+                    <div class="resume-section fade-up">
+                        <h3 class="resume-title"><i class="fas fa-code"></i> Skills</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary);">Programming
+                            </h4>
+                            <div class="skills-list">
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">VB / VBA</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">MATLAB / Octave</span>
+                                <span class="skill-tag">SQL (PostgreSQL)</span>
+                                <span class="skill-tag">JavaScript (GEE)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary);">Geomatics
+                                Software</h4>
+                            <div class="skills-list">
+                                <span class="skill-tag">Microstation</span>
+                                <span class="skill-tag">Inroad / OpenRoad</span>
+                                <span class="skill-tag">ArcGIS(Pro) / ArcMap</span>
+                                <span class="skill-tag">AutoCAD</span>
+                                <span class="skill-tag">BIM Revit</span>
+                                <span class="skill-tag">Star*Net</span>
+                                <span class="skill-tag">ContextCapture</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section fade-up">
+                        <h3 class="resume-title"><i class="fas fa-trophy"></i> Awards / Recognition</h3>
+                        <ul style="color: var(--text-secondary); list-style-position: inside; line-height: 2;">
+                            <li>Hong Kong Institute of Surveyors (HKIS) Scholarship, Second Prize (2022)</li>
+                            <li>Hong Kong Institute of Engineering Surveyors (HKIES) Scholarship (2022)</li>
+                            <li>Esri China (Hong Kong) Scholarship (2020-21)</li>
+                            <li>Hong Kong Institute of Surveyors (HKIS) Scholarship, First Prize (2020)</li>
+                            <li>Hong Kong Government Scholarship (2019-20)</li>
+                            <li>Dean's Honor List (2018-2022)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Isaac Wu. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
